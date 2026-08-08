@@ -1,0 +1,61 @@
+.section {
+  padding: 100px 0;
+  background-color: var(--template-bg);
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 38px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.description {
+  color: var(--template-color);
+  font-size: 18px;
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.logoCard {
+  width: 220px;
+  height: 120px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-sm);
+}
+
+.logoCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: rgba(0,0,0,0.1);
+}
+
+.partnerName {
+  font-weight: 700;
+  color: var(--template-color);
+  text-align: center;
+  padding: 15px;
+  transition: var(--transition);
+}
+
+.logoCard:hover .partnerName {
+  color: var(--primary-color);
+}

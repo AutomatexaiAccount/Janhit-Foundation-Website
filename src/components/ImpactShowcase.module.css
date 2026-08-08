@@ -1,0 +1,238 @@
+.showcase {
+  padding: 140px 0 80px;
+  background-color: var(--template-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundGlow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(5,150,105,0.08) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Side */
+.interactiveBanners {
+  display: flex;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 480px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.mainBanner {
+  flex: 1.2;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.9));
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--base-color);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.mainBanner h3 {
+  font-size: 38px;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.mainBanner p {
+  color: var(--template-color);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+/* Vertical Tabs re-imagined as sleek list */
+.verticalTabsContainer {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-bg);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--base-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.tab:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--white);
+  padding-left: 40px;
+}
+
+.tab:hover::before {
+  transform: scaleY(1);
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.tabDesc {
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+
+.tab:hover .tabDesc {
+  opacity: 1;
+  transform: translateY(0);
+  color: rgba(255,255,255,0.7);
+}
+
+/* Right Side */
+.founderCard {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.founderImageWrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.founderImageWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.founderHeader {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: var(--white);
+}
+
+.founderHeader h4 {
+  margin: 0;
+  color: var(--white);
+  font-size: 24px;
+}
+
+.founderHeader p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--base-color);
+  font-weight: 600;
+}
+
+.founderQuote {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+
+.founderQuote p {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  position: relative;
+}
+
+.readMore {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.readMore:hover {
+  color: var(--primary-light);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .interactiveBanners {
+    flex-direction: column;
+    height: auto;
+  }
+  .verticalTabsContainer {
+    height: 300px;
+  }
+  .tabDesc {
+    opacity: 1;
+    transform: none;
+  }
+}
