@@ -5,11 +5,26 @@ import { useInView } from "react-intersection-observer";
 import styles from "./Partners.module.css";
 
 const partners = [
-  "UNDP",
-  "Ministry of Environment",
-  "World Bank",
-  "Local Govt Agencies",
-  "Corporate CSR Partners",
+  {
+    name: "UNDP",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/13/UNDP_logo.svg",
+  },
+  {
+    name: "Ministry of Environment",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg",
+  },
+  {
+    name: "World Bank",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/The_World_Bank_logo.svg",
+  },
+  {
+    name: "Local Govt Agencies",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Town_hall_icon.svg/512px-Town_hall_icon.svg.png",
+  },
+  {
+    name: "Corporate CSR Partners",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Handshake_%28icon%29.svg/512px-Handshake_%28icon%29.svg.png",
+  },
 ];
 
 const containerVariants = {
@@ -49,7 +64,14 @@ export default function Partners() {
         >
           {partners.map((partner, index) => (
             <motion.div key={index} className={styles.logoCard} variants={cardVariants}>
-              <span className={styles.partnerName}>{partner}</span>
+              <div className={styles.logoImageWrapper}>
+                <img 
+                  src={partner.logo} 
+                  alt={`${partner.name} Logo`} 
+                  className={styles.partnerLogoImg} 
+                />
+              </div>
+              <span className={styles.partnerName}>{partner.name}</span>
             </motion.div>
           ))}
         </motion.div>

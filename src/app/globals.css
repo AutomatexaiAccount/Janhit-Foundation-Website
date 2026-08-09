@@ -36,6 +36,10 @@ body {
   font-family: var(--font-nunito-sans), system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.7;
+  background-image: url('/bg-water.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {

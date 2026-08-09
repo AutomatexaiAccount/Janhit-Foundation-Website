@@ -1,6 +1,6 @@
 .showcase {
   padding: 140px 0 80px;
-  background-color: var(--template-bg);
+  background-color: transparent;
   position: relative;
   overflow: hidden;
 }
