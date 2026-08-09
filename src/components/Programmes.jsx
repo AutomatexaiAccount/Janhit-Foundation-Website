@@ -24,6 +24,12 @@ const programmes = [
     title: "Sustainable Agriculture",
     description: "Promoting organic agriculture as a viable, sustainable alternative to conventional farming practices throughout the region.",
     image: "/child-education.png",
+  },
+  {
+    id: 4,
+    title: "Rain Water Harvesting",
+    description: "Implementing innovative rainwater harvesting systems to conserve water and ensure sustainable water availability for rural communities.",
+    image: "/rainwater-harvesting.png",
   }
 ];
 
@@ -60,10 +66,17 @@ export default function Programmes() {
           className={styles.grid}
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           {programmes.map(programme => (
-            <motion.div key={programme.id} className={styles.card} variants={cardVariants}>
+            <motion.div 
+              key={programme.id} 
+              className={styles.card} 
+              variants={cardVariants}
+              whileHover={{ y: -15, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className={styles.imageWrapper}>
                 <Image 
                   src={programme.image} 

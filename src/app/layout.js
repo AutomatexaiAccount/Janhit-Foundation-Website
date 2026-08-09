@@ -1,6 +1,7 @@
 import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Preloader from "../components/Preloader";
+import Footer from "../components/Footer";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={`${nunito.variable} ${nunitoSans.variable}`}>
         <Preloader />
         {children}
+        <Footer />
       </body>
     </html>
   );

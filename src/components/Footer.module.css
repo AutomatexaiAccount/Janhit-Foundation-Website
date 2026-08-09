@@ -1,0 +1,195 @@
+.footer {
+  background-color: var(--dark-bg);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+/* A subtle gradient border at the top of the footer */
+.footerTopWave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--base-color), var(--primary-light), var(--base-color));
+}
+
+.footerContent {
+  padding: 80px 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+.brandName {
+  color: var(--white);
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.aboutText {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 350px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.socialLinks a:hover .socialIcon {
+  background-color: var(--base-color);
+  transform: translateY(-3px);
+}
+
+.colTitle {
+  color: var(--white);
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.colTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--base-color);
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksList li a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.linksList li a:hover {
+  color: var(--base-color);
+  transform: translateX(5px);
+}
+
+.contactInfo {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contactIcon {
+  color: var(--base-color);
+  font-size: 18px;
+}
+
+.donateBtnOutline {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid var(--base-color);
+  color: var(--base-color);
+  border-radius: 50px;
+  font-weight: 700;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.donateBtnOutline:hover {
+  background-color: var(--base-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.footerBottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomContainer p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLinks a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.bottomLinks a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottomContainer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

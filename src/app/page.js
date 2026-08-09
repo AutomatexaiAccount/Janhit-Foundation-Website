@@ -4,6 +4,7 @@ import ImpactStats from "../components/ImpactStats";
 import Programmes from "../components/Programmes";
 import Awards from "../components/Awards";
 import Partners from "../components/Partners";
+import CallToAction from "../components/CallToAction";
 import Head from "next/head";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <Programmes />
         <Awards />
         <Partners />
+        <CallToAction />
       </main>
     </>
   );
