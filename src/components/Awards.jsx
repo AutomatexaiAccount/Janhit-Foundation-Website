@@ -78,9 +78,8 @@ export default function Awards() {
                 <Image 
                   src={award.image} 
                   alt={award.title} 
-                  width={200}
-                  height={150}
-                  style={{ objectFit: "cover", borderRadius: "8px" }} 
+                  fill
+                  style={{ objectFit: "cover" }} 
                 />
               </div>
             </motion.div>

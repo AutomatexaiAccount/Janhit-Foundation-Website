@@ -7,10 +7,12 @@ import WaterDroplets from "./WaterDroplets";
 import styles from "./ImpactStats.module.css";
 
 const stats = [
-  { id: 1, label: "Years of Service", value: 25, suffix: "+" },
-  { id: 2, label: "Lives Impacted", value: 50000, suffix: "+" },
-  { id: 3, label: "Villages Reached", value: 100, suffix: "+" },
-  { id: 4, label: "Awards Won", value: 15, suffix: "+" },
+  { id: 1, label: "Children rescued out of Child Labour", value: 500, suffix: "+" },
+  { id: 2, label: "Child Marriages stopped", value: 100, suffix: "+" },
+  { id: 3, label: "No. of farmers moved to Organic Farming", value: 1000, suffix: "+" },
+  { id: 4, label: "Ponds Revived", value: 50, suffix: "+" },
+  { id: 5, label: "Children Restored with families", value: 200, suffix: "+" },
+  { id: 6, label: "Nutrition to COVID affected families", value: 5000, suffix: "+" },
 ];
 
 const containerVariants = {

@@ -18,79 +18,51 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1.8fr 1fr;
+  grid-template-columns: 1fr 1.8fr;
   gap: 40px;
   position: relative;
   z-index: 1;
 }
 
-/* Left Side */
-.interactiveBanners {
-  display: flex;
-  background-color: var(--white);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  height: 480px;
-  border: 1px solid rgba(0,0,0,0.03);
-}
-
-.mainBanner {
-  flex: 1.2;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.9));
-}
-
-.badge {
-  display: inline-block;
-  padding: 6px 12px;
-  background-color: rgba(245, 158, 11, 0.1);
-  color: var(--base-color);
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-}
-
-.mainBanner h3 {
-  font-size: 38px;
-  color: var(--secondary-color);
-  margin-bottom: 25px;
-  line-height: 1.1;
-}
-
-.mainBanner p {
-  color: var(--template-color);
-  line-height: 1.8;
-  margin-bottom: 30px;
-  font-size: 17px;
-}
-
-/* Vertical Tabs re-imagined as sleek list */
+/* Left Side Content */
 .verticalTabsContainer {
-  flex: 0.8;
   display: flex;
   flex-direction: column;
-  background-color: var(--dark-bg);
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(2, 44, 34, 0.2);
+  height: 480px;
+  position: relative;
+}
+
+.verticalTabsContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .tab {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 0 30px;
-  color: rgba(255,255,255,0.7);
+  padding: 0 40px;
+  color: rgba(255,255,255,0.6);
   cursor: pointer;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  transition: var(--transition);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+}
+
+.tab:last-child {
+  border-bottom: none;
 }
 
 .tab::before {
@@ -98,18 +70,18 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 4px;
+  width: 6px;
   height: 100%;
-  background-color: var(--base-color);
+  background: linear-gradient(to bottom, #10b981, #34d399);
   transform: scaleY(0);
-  transition: transform 0.3s ease;
-  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
 }
 
 .tab:hover {
-  background-color: rgba(255,255,255,0.05);
-  color: var(--white);
-  padding-left: 40px;
+  background: rgba(255,255,255,0.04);
+  color: #ffffff;
+  padding-left: 50px;
 }
 
 .tab:hover::before {
@@ -119,28 +91,38 @@
 .tabContent {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .tabTitle {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
 }
 
 .tabDesc {
-  font-size: 13px;
+  font-size: 14px;
   opacity: 0;
-  transform: translateY(10px);
-  transition: var(--transition);
+  transform: translateY(15px);
+  transition: all 0.4s ease;
+  color: #94a3b8;
 }
 
 .tab:hover .tabDesc {
   opacity: 1;
   transform: translateY(0);
-  color: rgba(255,255,255,0.7);
+  color: #a7f3d0;
 }
 
 /* Right Side */
+.foundersContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
 .founderCard {
   background-color: var(--white);
   border-radius: var(--radius-lg);
@@ -149,6 +131,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(0,0,0,0.03);
+  height: 480px;
 }
 
 .founderImageWrapper {
@@ -224,12 +207,12 @@
 }
 
 @media (max-width: 768px) {
-  .interactiveBanners {
-    flex-direction: column;
-    height: auto;
+  .foundersContainer {
+    grid-template-columns: 1fr;
   }
   .verticalTabsContainer {
-    height: 300px;
+    height: auto;
+    min-height: 300px;
   }
   .tabDesc {
     opacity: 1;

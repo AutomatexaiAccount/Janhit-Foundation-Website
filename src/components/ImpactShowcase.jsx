@@ -29,71 +29,85 @@ export default function ImpactShowcase() {
       ></motion.div>
       <div className={`container ${styles.container}`}>
         
-        {/* Left Side: Interactive Banners */}
+        {/* Left Side: Content Tabs */}
         <motion.div 
-          className={styles.interactiveBanners}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className={styles.verticalTabsContainer}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {publications.map((pub, index) => (
+            <motion.div 
+              key={pub.id} 
+              className={styles.tab}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02, x: 10, backgroundColor: "var(--dark-bg)" }}
+            >
+              <div className={styles.tabContent}>
+                <span className={styles.tabTitle}>{pub.title}</span>
+                <span className={styles.tabDesc}>{pub.desc}</span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Right Side: Founders */}
+        <motion.div 
+          className={styles.foundersContainer}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div 
-            className={styles.mainBanner}
+            className={styles.founderCard}
             whileHover={{ y: -5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <span className={styles.badge}>Welcome to</span>
-            <h3>Janhit Foundation</h3>
-            <p>Founded in 1998 by Dr. Anil Rana, an educationist by profession but an environmentalist at heart to work for Environmental & Water Conservation in Western Uttar Pradesh.</p>
-            <Link href="#" className="btn">Read More &rarr;</Link>
-          </motion.div>
-          
-          <div className={styles.verticalTabsContainer}>
-            {publications.map((pub, index) => (
-              <motion.div 
-                key={pub.id} 
-                className={styles.tab}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, x: 10, backgroundColor: "var(--dark-bg)" }}
-              >
-                <div className={styles.tabContent}>
-                  <span className={styles.tabTitle}>{pub.title}</span>
-                  <span className={styles.tabDesc}>{pub.desc}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Right Side: Founder's Vision */}
-        <motion.div 
-          className={styles.founderCard}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          animate={{ y: [0, -10, 0] }}
-          style={{ animationDuration: "6s", animationIterationCount: "infinite", animationTimingFunction: "ease-in-out" }}
-        >
-          <div className={styles.founderImageWrapper}>
-            <Image 
-              src="/founder-portrait.png" 
-              alt="Dr. Anil Rana" 
-              fill
-              style={{ objectFit: "cover" }}
-            />
-            <div className={styles.founderHeader}>
-              <h4>Lt. Sh. Anil Rana</h4>
-              <p>Founder Director</p>
+            <div className={styles.founderImageWrapper}>
+              <Image 
+                src="/mrs-rana.jpeg" 
+                alt="Co-Founder" 
+                fill
+                style={{ objectFit: "cover" }}
+              />
+              <div className={styles.founderHeader}>
+                <h4>Mrs. Rana</h4>
+                <p>Co-Founder</p>
+              </div>
             </div>
-          </div>
-          <div className={styles.founderQuote}>
-            <p>&ldquo;To make the journey of life eventful I chose the intruded way and at...&rdquo;</p>
-            <Link href="#" className={styles.readMore}>Continue reading</Link>
-          </div>
+            <div className={styles.founderQuote}>
+              <p>&ldquo;Together we can build a sustainable future and empower our communities...&rdquo;</p>
+
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className={styles.founderCard}
+            whileHover={{ y: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className={styles.founderImageWrapper}>
+              <Image 
+                src="/mr-anil-rana.jpeg" 
+                alt="Dr. Anil Rana" 
+                fill
+                style={{ objectFit: "cover" }}
+              />
+              <div className={styles.founderHeader}>
+                <h4>Lt. Sh. Anil Rana</h4>
+                <p>Founder Director</p>
+              </div>
+            </div>
+            <div className={styles.founderQuote}>
+              <p>&ldquo;To make the journey of life eventful I chose the intruded way and at...&rdquo;</p>
+
+            </div>
+          </motion.div>
         </motion.div>
 
       </div>

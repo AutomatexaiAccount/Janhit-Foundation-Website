@@ -7,7 +7,7 @@ import styles from "./Partners.module.css";
 const partners = [
   {
     name: "UNDP",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/13/UNDP_logo.svg",
+    logo: "https://img.icons8.com/color/512/united-nations.png",
   },
   {
     name: "Ministry of Environment",
@@ -19,11 +19,11 @@ const partners = [
   },
   {
     name: "Local Govt Agencies",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Town_hall_icon.svg/512px-Town_hall_icon.svg.png",
+    logo: "https://img.icons8.com/ios/512/city-buildings.png",
   },
   {
     name: "Corporate CSR Partners",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Handshake_%28icon%29.svg/512px-Handshake_%28icon%29.svg.png",
+    logo: "https://img.icons8.com/ios/512/handshake.png",
   },
 ];
 
