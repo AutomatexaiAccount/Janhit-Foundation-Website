@@ -14,8 +14,8 @@ export default function WelcomeSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className={styles.badge}>About Us</span>
-          <h2 className={styles.title}>Welcome to Janhit Foundation</h2>
+          <span className={styles.badge}>Since 1998</span>
+          <h2 className={styles.title}>Building Sustainable Communities</h2>
         </motion.div>
         
         <div className={styles.content}>
@@ -26,20 +26,12 @@ export default function WelcomeSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p>
-              Founded in 1998 by Dr. Anil Rana, an educationist by profession but an environmentalist at heart to work for Environmental & Water Conservation in Western Uttar Pradesh. Currently working extensively on Water Conservation, Sustainable Agriculture, Environmental Conservation, Child Rights Protection & Women Rights Protection along with Income Generation Activities for women from marginalized communities. Awareness in all the above-mentioned themes has always gone hands in hands with our work on the ground since our inception.
+            <p className={styles.heroDescription}>
+              Protecting water. Promoting sustainable agriculture. Empowering women. Protecting children. Creating resilient communities across Western Uttar Pradesh.
             </p>
-            <p>
-              We have also been given the responsibility to manage the 24X7 Child Helpline 1098 on behalf of Ministry of Women & Child Development, Govt. of India in Meerut and with our excellent work record we were also awarded to run the Railway Child Help Desk (Railway Childline) in Meerut in 2019, we became an obvious choice.
-            </p>
-            <p>
-              Geographically we have been implementing projects across Western Uttar Pradesh, Haryana and NCR with our focus in Meerut but with programs spread over in Noida, Greater Noida, Ghaziabad, Hapur, Muzzafarnagar, Shamli, Panipat, Sonepat, Karnal and Jhajjhar.
-            </p>
-            <p>
-              Registered as a non-profit under Societies Registration Act, 1860 with tax exemptions from Income Tax Department under Section 12A & 80G Also registered under Foreign Contribution Regulation Act, 2010 and has had long-term partnered with bi-laterals, multi-laterals and many corporate donors in the past and has implemented multiple projects successfully.
-            </p>
-            <div className={styles.highlightText}>
-              We welcome you to Janhit Foundation and be a part of the impactful work that we are doing everyday to bring sustainable change in the lives that we touch.
+            <div className={styles.heroActions}>
+              <a href="#impact" className={styles.primaryBtn}>Explore Our Work</a>
+              <a href="#partner" className={styles.secondaryBtn}>Partner With Us</a>
             </div>
           </motion.div>
         </div>

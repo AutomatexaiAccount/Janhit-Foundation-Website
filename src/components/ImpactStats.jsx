@@ -1,18 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CountUp from "react-countup";
+
 import { useInView } from "react-intersection-observer";
 import WaterDroplets from "./WaterDroplets";
 import styles from "./ImpactStats.module.css";
 
 const stats = [
-  { id: 1, label: "Children rescued out of Child Labour", value: 500, suffix: "+" },
-  { id: 2, label: "Child Marriages stopped", value: 100, suffix: "+" },
-  { id: 3, label: "No. of farmers moved to Organic Farming", value: 1000, suffix: "+" },
-  { id: 4, label: "Ponds Revived", value: 50, suffix: "+" },
-  { id: 5, label: "Children Restored with families", value: 200, suffix: "+" },
-  { id: 6, label: "Nutrition to COVID affected families", value: 5000, suffix: "+" },
+  { id: 1, value: "25+ Years", label: "of community-led development" },
+  { id: 2, value: "Western UP & NCR", label: "communities reached" },
+  { id: 3, value: "Multiple Themes", label: "Water • Agriculture • Environment • Child Rights • Women" },
 ];
 
 const containerVariants = {
@@ -35,7 +32,7 @@ export default function ImpactStats() {
   });
 
   return (
-    <section className={styles.section} ref={ref}>
+    <section className={styles.section} ref={ref} id="impact">
       <WaterDroplets />
       <div className={`container ${styles.container}`}>
         <motion.div
@@ -46,10 +43,7 @@ export default function ImpactStats() {
         >
           {stats.map((stat) => (
             <motion.div key={stat.id} className={styles.statCard} variants={itemVariants}>
-              <h3 className={styles.statValue}>
-                {inView ? <CountUp end={stat.value} duration={2.5} separator="," /> : "0"}
-                {stat.suffix}
-              </h3>
+              <h3 className={styles.statValue}>{stat.value}</h3>
               <p className={styles.statLabel}>{stat.label}</p>
             </motion.div>
           ))}

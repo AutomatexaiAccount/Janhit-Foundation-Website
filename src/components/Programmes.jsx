@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -9,27 +8,39 @@ import styles from "./Programmes.module.css";
 const programmes = [
   {
     id: 1,
-    title: "Water Conservation",
-    description: "Janhit Foundation takes a three pronged approach to dealing with water issues in Uttar Pradesh, based upon ensuring sustainable solutions.",
-    image: "/child-education.png",
+    title: "Water & Natural Resources",
+    description: "Ensuring sustainable solutions through groundwater recharge, restoration of water bodies, and community water management.",
+    image: "/rainwater-harvesting.png",
   },
   {
     id: 2,
-    title: "Child Rights Protection",
-    description: "CHILDLINE is India’s first 24-hour, toll-free, emergency phone outreach service for children in need of care and protection.",
+    title: "Sustainable Agriculture",
+    description: "Promoting organic agriculture through engagement with 2,000+ farmers in Meerut district, providing organic inputs, training, and soil testing across 210 villages, alongside market linkages and high-value crops.",
     image: "/healthy-food.png",
   },
   {
     id: 3,
-    title: "Sustainable Agriculture",
-    description: "Promoting organic agriculture as a viable, sustainable alternative to conventional farming practices throughout the region.",
-    image: "/child-education.png",
+    title: "Environment & Biodiversity",
+    description: "Protecting local ecosystems, enhancing green cover, and promoting biodiversity conservation through community action.",
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 4,
-    title: "Rain Water Harvesting",
-    description: "Implementing innovative rainwater harvesting systems to conserve water and ensure sustainable water availability for rural communities.",
-    image: "/rainwater-harvesting.png",
+    title: "Child Rights & Protection",
+    description: "Operating 24/7 child helplines and working tirelessly to rescue children from labor, abuse, and marginalization.",
+    image: "/child-education.png",
+  },
+  {
+    id: 5,
+    title: "Women's Rights & Empowerment",
+    description: "Empowering women through dedicated helplines, legal aid, education, and robust social sector support.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 6,
+    title: "Sustainable Livelihoods",
+    description: "Building capacity and fostering income generation activities to ensure long-term economic resilience for marginalized groups.",
+    image: "/bg-water.png",
   }
 ];
 
@@ -78,11 +89,10 @@ export default function Programmes() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className={styles.imageWrapper}>
-                <Image 
+                <img 
                   src={programme.image} 
                   alt={programme.title} 
-                  fill 
-                  style={{ objectFit: "cover" }} 
+                  className={styles.cardImage}
                 />
                 <div className={styles.overlay}>
                   <Link href="#" className="btn btn-secondary">Learn More</Link>

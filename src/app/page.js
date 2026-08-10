@@ -1,11 +1,14 @@
 import Header from "../components/Header";
 import WelcomeSection from "../components/WelcomeSection";
-import ImpactShowcase from "../components/ImpactShowcase";
-import MindsBehindVision from "../components/MindsBehindVision";
-import MissionVision from "../components/MissionVision";
 import ImpactStats from "../components/ImpactStats";
+import MissionVision from "../components/MissionVision";
+import MindsBehindVision from "../components/MindsBehindVision";
 import Programmes from "../components/Programmes";
-import Awards from "../components/Awards";
+import HowWeWork from "../components/HowWeWork";
+import ImpactShowcase from "../components/ImpactShowcase";
+import OurJourney from "../components/OurJourney";
+import WhyJanhit from "../components/WhyJanhit";
+import CSRPartnerships from "../components/CSRPartnerships";
 import Partners from "../components/Partners";
 import CallToAction from "../components/CallToAction";
 import Head from "next/head";
@@ -20,12 +23,15 @@ export default function Home() {
       <main>
         <Header />
         <WelcomeSection />
-        <ImpactShowcase />
-        <MindsBehindVision />
-        <MissionVision />
         <ImpactStats />
+        <MissionVision />
+        <MindsBehindVision />
         <Programmes />
-        <Awards />
+        <HowWeWork />
+        <ImpactShowcase />
+        <OurJourney />
+        <WhyJanhit />
+        <CSRPartnerships />
         <Partners />
         <CallToAction />
       </main>

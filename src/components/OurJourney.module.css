@@ -1,0 +1,131 @@
+.section {
+  padding: 100px 0;
+  background-color: var(--light-bg);
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.title {
+  font-size: 42px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  height: 100%;
+  width: 4px;
+  background: rgba(5, 150, 105, 0.2);
+  border-radius: 2px;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.yearBadge {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+  z-index: 1;
+}
+
+.timelineContent {
+  margin-left: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  flex: 1;
+}
+
+.timelineContent::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.itemTitle {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.itemDescription {
+  color: var(--template-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  .yearBadge {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+  }
+  .timelineContent {
+    margin-left: 20px;
+    padding: 20px;
+  }
+  .itemTitle {
+    font-size: 20px;
+  }
+}

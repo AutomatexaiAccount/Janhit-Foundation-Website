@@ -24,12 +24,13 @@ export default function CallToAction() {
             Ready to make an impact?
           </motion.h2>
           <p className={styles.description}>
-            Join thousands of volunteers and donors making a real difference in the lives of rural communities. 
-            Your support can provide clean water, education, and sustainable livelihoods.
+            Whether you are an individual wanting to support grassroots change, a CSR foundation looking for a reliable implementing partner, or a professional wanting to volunteer your skills—there is a place for you here.
           </p>
           <div className={styles.actions}>
-            <Link href="#" className={styles.donateBtn}>Donate Now</Link>
-            <Link href="#" className={styles.volunteerBtn}>Become a Volunteer</Link>
+            <Link href="#" className={styles.donateBtn}>Donate</Link>
+            <Link href="#" className={styles.partnerBtn}>CSR Partnership</Link>
+            <Link href="#" className={styles.volunteerBtn}>Volunteer</Link>
+            <Link href="#" className={styles.collaborateBtn}>Collaborate</Link>
           </div>
         </motion.div>
       </div>

@@ -134,3 +134,41 @@
     font-size: 36px;
   }
 }
+
+.partnerBtn {
+  background: transparent;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.partnerBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.collaborateBtn {
+  background: transparent;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.collaborateBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}

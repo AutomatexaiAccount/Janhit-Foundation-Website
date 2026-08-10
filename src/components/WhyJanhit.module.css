@@ -1,0 +1,95 @@
+.section {
+  padding: 100px 0;
+  background-color: var(--light-bg);
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.title {
+  font-size: 42px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(5, 150, 105, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-color);
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.cardDescription {
+  color: var(--template-color);
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

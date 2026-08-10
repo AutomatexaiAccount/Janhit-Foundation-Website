@@ -5,26 +5,32 @@ import { useInView } from "react-intersection-observer";
 import styles from "./Partners.module.css";
 
 const partners = [
-  {
-    name: "UNDP",
-    logo: "https://img.icons8.com/color/512/united-nations.png",
-  },
-  {
-    name: "Ministry of Environment",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg",
-  },
-  {
-    name: "World Bank",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/The_World_Bank_logo.svg",
-  },
-  {
-    name: "Local Govt Agencies",
-    logo: "https://img.icons8.com/ios/512/city-buildings.png",
-  },
-  {
-    name: "Corporate CSR Partners",
-    logo: "https://img.icons8.com/ios/512/handshake.png",
-  },
+  { name: "UNDP", logo: "/logos/undp.png" },
+  { name: "Ministry of Environment", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" },
+  { name: "World Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/The_World_Bank_logo.svg" },
+  { name: "IFOAM", logo: "/logos/ifoam.png" },
+  { name: "Sir Ratan Tata Trust", logo: "/logos/sir_ratan_tata_trust.png" },
+  { name: "Earth Day Network", logo: "/logos/earth_day_network.png" },
+  { name: "Global Water Partnership", logo: "/logos/global_water_partnership.png" },
+  { name: "ICCOA", logo: "/logos/iccoa.png" },
+  { name: "WaterAid", logo: "/logos/wateraid.png" },
+  { name: "Sealed Air", logo: "/logos/sealed_air.png" },
+  { name: "Mahindra Rise", logo: "/logos/mahindra_rise.png" },
+  { name: "ADR", logo: "/logos/adr.png" },
+  { name: "Childline 1098", logo: "https://ui-avatars.com/api/?name=Childline+1098&background=random&color=fff" },
+  { name: "Oxfam", logo: "/logos/oxfam.png" },
+  { name: "Adobe", logo: "/logos/adobe.png" },
+  { name: "Global Greengrants Fund", logo: "/logos/global_greengrants_fund.png" },
+  { name: "CSE", logo: "/logos/cse.png" },
+  { name: "FAO", logo: "/logos/fao.png" },
+  { name: "Blacksmith Institute", logo: "/logos/blacksmith_institute.png" },
+  { name: "FIAN", logo: "/logos/fian.png" },
+  { name: "CAF India", logo: "/logos/caf_india.png" },
+  { name: "Institute of International Education", logo: "/logos/institute_of_international_education.png" },
+  { name: "Ford Foundation", logo: "/logos/ford_foundation.png" },
+  { name: "Coca-Cola India", logo: "/logos/coca_cola_india.png" },
+  { name: "Royal Netherlands Embassy", logo: "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg" },
+  { name: "OneWorld South Asia", logo: "/logos/oneworld_south_asia.png" },
 ];
 
 const containerVariants = {
@@ -69,6 +75,9 @@ export default function Partners() {
                   src={partner.logo} 
                   alt={`${partner.name} Logo`} 
                   className={styles.partnerLogoImg} 
+                  onError={(e) => {
+                    e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(partner.name)}&background=random&color=fff`;
+                  }}
                 />
               </div>
               <span className={styles.partnerName}>{partner.name}</span>
