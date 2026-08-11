@@ -15,6 +15,7 @@ export default function WaterDroplets() {
       delay: Math.random() * 5, // random animation delay
       duration: Math.random() * 5 + 5, // random duration between 5 and 10s
     }));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDroplets(newDroplets);
   }, []);
 

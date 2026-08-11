@@ -9,7 +9,7 @@ const reasons = [
   { id: 3, title: "Community-Led", description: "A highly effective community-led approach to solving problems." },
   { id: 4, title: "Multi-sector Expertise", description: "Experience across environment, agriculture, and social protection." },
   { id: 5, title: "Strong Partnerships", description: "Trusted by top institutional and corporate partners." },
-  { id: 6, title: "Integrated Approach", description: "Combining environment, livelihoods, and rights for holistic impact." },
+  { id: 6, title: "Measurable Impact", description: "Robust monitoring and evaluation frameworks to ensure lasting change." },
 ];
 
 const containerVariants = {
@@ -28,6 +28,9 @@ const itemVariants = {
 export default function WhyJanhit() {
   return (
     <section className={styles.section} id="why-janhit">
+      <div className={styles.orb1}></div>
+      <div className={styles.orb2}></div>
+      
       <div className={`container ${styles.container}`}>
         <motion.div 
           className={styles.sectionHeader}

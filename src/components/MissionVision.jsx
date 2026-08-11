@@ -12,7 +12,7 @@ export default function MissionVision() {
         <div className={styles.imageOverlay}></div>
         {/* We will add an actual Image tag later when we have a specific asset. For now, a solid background represents the image area. */}
         <div className={styles.taglineBox}>
-          <h2>"Alone we can do so little, together we can do so much"</h2>
+          <h2>&quot;Alone we can do so little, together we can do so much&quot;</h2>
         </div>
       </div>
 

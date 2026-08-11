@@ -33,11 +33,14 @@
 }
 
 .card {
-  background-color: var(--white);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   z-index: 1;
 }
@@ -50,14 +53,15 @@
   width: 100%;
   height: 100%;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 40px rgba(6, 95, 70, 0.15);
   opacity: 0;
   transition: var(--transition);
   z-index: -1;
 }
 
 .card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(5, 150, 105, 0.3);
 }
 
 .card:hover::before {

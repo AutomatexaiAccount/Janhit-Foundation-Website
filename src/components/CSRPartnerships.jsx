@@ -20,19 +20,21 @@ export default function CSRPartnerships() {
             <h2 className={styles.title}>Partner With Janhit</h2>
             <div className={styles.divider}></div>
             <p className={styles.description}>
-              We collaborate with CSR foundations, corporates, academic institutions and development partners to design and implement measurable community development programmes.
+              Looking for a credible grassroots implementation partner for your CSR or sustainability programme? We offer end-to-end partnership services.
             </p>
             
             <div className={styles.categories}>
-              <span className={styles.categoryItem}>CSR Partnerships</span>
+              <span className={styles.categoryItem}>Programme Design</span>
               <span className={styles.dot}>•</span>
-              <span className={styles.categoryItem}>Institutional Grants</span>
+              <span className={styles.categoryItem}>Community Mobilisation</span>
               <span className={styles.dot}>•</span>
-              <span className={styles.categoryItem}>Research</span>
+              <span className={styles.categoryItem}>Field Implementation</span>
               <span className={styles.dot}>•</span>
-              <span className={styles.categoryItem}>Community Programmes</span>
+              <span className={styles.categoryItem}>Monitoring & Evaluation</span>
               <span className={styles.dot}>•</span>
-              <span className={styles.categoryItem}>Volunteer Engagement</span>
+              <span className={styles.categoryItem}>Impact Measurement</span>
+              <span className={styles.dot}>•</span>
+              <span className={styles.categoryItem}>Project Scale-up</span>
             </div>
 
             <Link href="#contact" className={styles.ctaBtn}>

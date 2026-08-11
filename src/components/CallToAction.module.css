@@ -155,14 +155,19 @@
 }
 
 .collaborateBtn {
-  background: transparent;
-  color: white;
-  padding: 16px 36px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 700;
-  border: 2px solid white;
+  background: white;
+  color: var(--primary-color);
+  padding: 15px 32px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
   transition: all 0.3s ease;
+  border: 2px solid white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
 }

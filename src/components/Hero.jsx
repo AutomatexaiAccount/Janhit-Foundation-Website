@@ -6,14 +6,15 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.overlay}></div>
       <div className={`container ${styles.content}`}>
-        <h3 className={styles.subtitle}>Welcome To</h3>
-        <h1 className={styles.title}>Janhit Foundation</h1>
+        <h3 className={styles.subtitle}>Building Sustainable Communities</h3>
+        <h1 className={styles.title}>Creating Measurable Impact.</h1>
         <p className={styles.description}>
-          Founded in 1998 by Dr. Anil Rana, an educationist by profession but an environmentalist at heart to work for Environmental & Water Conservation in Western Uttar Pradesh. Currently working extensively on Water Conservation, Sustainable Agriculture, Environmental Conservation, Child Rights Protection & Women Rights.
+          Since 1998, Janhit Foundation has worked with communities across Western Uttar Pradesh and NCR to strengthen water security, promote sustainable agriculture, protect children, empower women and build resilient livelihoods.
         </p>
         <div className={styles.buttons}>
-          <Link href="#" className="btn">Read More</Link>
-          <Link href="#" className="btn btn-secondary">Get Involved</Link>
+          <Link href="/impact" className="btn">Explore Our Impact</Link>
+          <Link href="/partner-with-us" className="btn btn-secondary">Partner With Us</Link>
+          <Link href="/programmes" className="btn btn-outline" style={{ border: '2px solid white', background: 'transparent', color: 'white' }}>View Our Programmes</Link>
         </div>
       </div>
     </section>

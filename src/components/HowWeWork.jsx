@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import styles from "./HowWeWork.module.css";
 
 const steps = [
-  { id: 1, title: "Community", description: "Engaging at the grassroots level to understand local needs." },
-  { id: 2, title: "Knowledge", description: "Researching and developing evidence-based solutions." },
-  { id: 3, title: "Action", description: "Implementing targeted programs with local participation." },
-  { id: 4, title: "Livelihood", description: "Ensuring economic empowerment and self-reliance." },
-  { id: 5, title: "Sustainability", description: "Creating long-term resilient systems for the future." },
+  { id: 1, title: "Understand", description: "Community needs assessment" },
+  { id: 2, title: "Design", description: "Evidence-based programme design" },
+  { id: 3, title: "Implement", description: "Community-led field execution" },
+  { id: 4, title: "Measure", description: "Outputs → Outcomes → Impact" },
+  { id: 5, title: "Sustain", description: "Local ownership & institutionalisation" },
 ];
 
 const containerVariants = {

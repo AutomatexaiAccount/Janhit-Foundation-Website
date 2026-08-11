@@ -25,31 +25,19 @@ export default function Header() {
         </div>
         <nav className={styles.nav}>
           <ul className={styles.navLinks}>
-            <li><Link href="/" className={styles.active}>Home</Link></li>
-            <li><Link href="#">About Us</Link></li>
-            <li><Link href="#">Programmes</Link></li>
-            <li><Link href="#">Achievements</Link></li>
-            <li><Link href="#">Events</Link></li>
-            <li><Link href="#">Contact Us</Link></li>
+            <li><Link href="/about">ABOUT</Link></li>
+            <li><Link href="/programmes">PROGRAMMES</Link></li>
+            <li><Link href="/impact">IMPACT</Link></li>
+            <li><Link href="/where-we-work">FOOTPRINT</Link></li>
+            <li><Link href="/reports">REPORTS</Link></li>
           </ul>
         </nav>
         <div className={styles.actions}>
-          <Link href="#" className={styles.donateBtn}>
-            <span>Donate Now</span>
-            <svg 
-              className={styles.heartIcon} 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="16" 
-              height="16" 
-              viewBox="0 0 24 24" 
-              fill="currentColor" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
+          <Link href="/partner-with-us" className={styles.partnerBtn}>
+            <span>Partner With Us</span>
+          </Link>
+          <Link href="/donate" className={styles.donateBtn}>
+            <span>Donate</span>
           </Link>
         </div>
       </div>

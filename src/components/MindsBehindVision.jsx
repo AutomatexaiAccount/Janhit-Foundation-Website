@@ -76,7 +76,7 @@ export default function MindsBehindVision() {
                     With his leadership, the organization could bring in multiple innovative projects supported by many institutional donors like Sir Ratan Tata Trust, Oxfam India, IGSSS, CAF India, Ford Foundation, Coca Cola India, and various national corporates with small to big support for the betterment of the region. His vision behind the organization could be gathered from one of his statements.
                   </p>
                   <blockquote className={styles.quote}>
-                    "To make my life's trip more interesting, I picked the intruded path, and when I returned to my objective, I saw a swarm of individuals who were all supporting the same social cause."
+                    &quot;To make my life&apos;s trip more interesting, I picked the intruded path, and when I returned to my objective, I saw a swarm of individuals who were all supporting the same social cause.&quot;
                   </blockquote>
                   <p>
                     Unfortunately Dr. Rana passed away untimely in 2008 and his wife took on as the head of the organization and is carrying forward his vision and name in the form of the projects being implemented by the project.

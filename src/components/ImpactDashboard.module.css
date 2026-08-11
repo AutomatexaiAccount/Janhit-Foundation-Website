@@ -1,0 +1,154 @@
+.section {
+  padding: 100px 0;
+  background-color: #f8fafc;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.title {
+  font-size: 42px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.description {
+  color: var(--template-color);
+  font-size: 18px;
+}
+
+.dashboardContainer {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.tabsList {
+  display: flex;
+  background: var(--light-bg);
+  border-bottom: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 20px 30px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--template-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tabBtn:hover {
+  color: var(--primary-color);
+  background: rgba(5, 150, 105, 0.05);
+}
+
+.tabBtn.active {
+  color: var(--primary-color);
+  background: white;
+}
+
+.tabBtn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.tabContentArea {
+  padding: 50px;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.metricCard {
+  text-align: center;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-light);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.metricValue {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--base-color);
+  margin: 0 0 15px 0;
+  line-height: 1;
+}
+
+.metricLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  .tabsList {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .tabBtn {
+    padding: 15px 20px;
+  }
+  
+  .tabContentArea {
+    padding: 30px 20px;
+  }
+  
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

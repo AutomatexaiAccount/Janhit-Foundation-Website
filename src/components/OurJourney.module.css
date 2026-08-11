@@ -40,6 +40,18 @@
   position: relative;
 }
 
+.timelineLine {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  height: 100%;
+  width: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  box-shadow: 0 0 15px var(--primary-color);
+  z-index: 0;
+}
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -47,8 +59,9 @@
   left: 50px;
   height: 100%;
   width: 4px;
-  background: rgba(5, 150, 105, 0.2);
+  background: rgba(5, 150, 105, 0.1);
   border-radius: 2px;
+  z-index: 0;
 }
 
 .timelineItem {
@@ -113,7 +126,7 @@
 }
 
 @media (max-width: 768px) {
-  .timeline::before {
+  .timeline::before, .timelineLine {
     left: 30px;
   }
   .yearBadge {

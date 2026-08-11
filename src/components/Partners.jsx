@@ -58,8 +58,8 @@ export default function Partners() {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className={styles.title}>Our Partners & Donors</h2>
-          <p className={styles.description}>We are proud to work alongside these esteemed organizations to drive change.</p>
+          <h2 className={styles.title}>Partners & Institutions</h2>
+          <p className={styles.description}>We are proud to work alongside these esteemed organizations to drive grassroots change.</p>
         </motion.div>
         
         <motion.div 

@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import styles from "./OurJourney.module.css";
 
 const journeyList = [
@@ -31,22 +32,23 @@ const journeyList = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 },
-  },
-};
-
 const itemVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, x: -50, scale: 0.9 },
+  visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.6, type: "spring", bounce: 0.4 } },
 };
 
 export default function OurJourney() {
+  const containerRef = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
+
+  const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
-    <section className={styles.section} id="journey">
+    <section className={styles.section} id="journey" ref={containerRef}>
       <div className={`container ${styles.container}`}>
         <motion.div 
           className={styles.sectionHeader}
@@ -55,23 +57,26 @@ export default function OurJourney() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.subtitle}>History & Impact</span>
-          <h2 className={styles.title}>Our Journey</h2>
+          <span className={styles.subtitle}>Our Story</span>
+          <h2 className={styles.title}>From One Professor&apos;s Vision to 25+ Years of Community Action</h2>
           <div className={styles.divider}></div>
         </motion.div>
         
-        <motion.div 
-          className={styles.timeline}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className={styles.timeline}>
+          {/* Animated Line */}
+          <motion.div 
+            className={styles.timelineLine} 
+            style={{ scaleY, transformOrigin: "top" }}
+          />
+          
           {journeyList.map((item, index) => (
             <motion.div 
               key={index} 
               className={styles.timelineItem}
               variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
             >
               <div className={styles.yearBadge}>{item.year}</div>
               <div className={styles.timelineContent}>
@@ -80,7 +85,7 @@ export default function OurJourney() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

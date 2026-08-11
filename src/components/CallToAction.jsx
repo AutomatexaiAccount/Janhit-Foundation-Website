@@ -21,16 +21,15 @@ export default function CallToAction() {
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
           >
-            Ready to make an impact?
+            Let&apos;s Create Measurable Change Together.
           </motion.h2>
           <p className={styles.description}>
-            Whether you are an individual wanting to support grassroots change, a CSR foundation looking for a reliable implementing partner, or a professional wanting to volunteer your skills—there is a place for you here.
+            Partner with us to implement verified, community-led programs that create lasting impact across Western Uttar Pradesh and beyond.
           </p>
           <div className={styles.actions}>
-            <Link href="#" className={styles.donateBtn}>Donate</Link>
-            <Link href="#" className={styles.partnerBtn}>CSR Partnership</Link>
-            <Link href="#" className={styles.volunteerBtn}>Volunteer</Link>
-            <Link href="#" className={styles.collaborateBtn}>Collaborate</Link>
+            <Link href="/partner-with-us" className={styles.partnerBtn}>Partner With Us</Link>
+            <button onClick={() => window.print()} className={styles.collaborateBtn}>Download Impact Brief</button>
+            <Link href="/donate" className={styles.donateBtn}>Donate</Link>
           </div>
         </motion.div>
       </div>
