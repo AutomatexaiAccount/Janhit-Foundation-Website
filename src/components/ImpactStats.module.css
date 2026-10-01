@@ -1,12 +1,8 @@
 .section {
   padding: 80px 0;
-  background-color: #f9f9f9;
+  background-color: var(--template-bg);
   position: relative;
   overflow: hidden;
-}
-
-.section::after {
-  display: none;
 }
 
 .container {
@@ -22,56 +18,84 @@
 .sectionTitle {
   font-size: 36px;
   font-weight: 800;
-  color: #222;
-  text-transform: uppercase;
+  color: var(--secondary-color);
   letter-spacing: 1px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
 .statCard {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  border: 1px solid #eaeaea;
+  position: relative;
+  padding: 50px 30px;
+  border-radius: 16px;
+  border: none;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  z-index: 1;
 }
 
+/* Distinct pastel colors for the 6-card mosaic grid */
+.statCard:nth-child(1) { background-color: var(--pastel-orange); }
+.statCard:nth-child(2) { background-color: var(--pastel-blue); }
+.statCard:nth-child(3) { background-color: var(--pastel-yellow); }
+.statCard:nth-child(4) { background-color: var(--pastel-green); }
+.statCard:nth-child(5) { background-color: var(--pastel-purple); }
+.statCard:nth-child(6) { background-color: var(--pastel-pink); }
+
+/* Text colors matching the pastel themes */
+.statCard:nth-child(1) .statValue { color: #DE5824; }
+.statCard:nth-child(2) .statValue { color: #038B86; }
+.statCard:nth-child(3) .statValue { color: #D4A000; }
+.statCard:nth-child(4) .statValue { color: #2E8B57; }
+.statCard:nth-child(5) .statValue { color: #6B46C1; }
+.statCard:nth-child(6) .statValue { color: #D53F8C; }
+
 .statCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.06;
+  width: 140px;
+  height: 140px;
+  z-index: -1;
 }
 
 .statValue {
-  font-size: 42px;
+  font-size: 54px; /* Massive numbers */
   font-weight: 800;
-  color: var(--primary-color, #046a58);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.1;
 }
 
 .statLabel {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin: 0;
-  color: #555;
+  color: var(--template-color);
   line-height: 1.5;
 }
 
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 24px;
   }
 }
 
@@ -80,9 +104,9 @@
     grid-template-columns: 1fr;
   }
   .statValue {
-    font-size: 38px;
+    font-size: 46px;
   }
   .statCard {
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
 }

@@ -1,0 +1,316 @@
+.main {
+  background-color: var(--template-bg);
+  min-height: 100vh;
+}
+
+.banner {
+  position: relative;
+  height: 400px;
+  background-image: url('/hero-bg.png'); /* Fallback pattern */
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130px; /* Offset for fixed header */
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(222, 88, 36, 0.75) 100%);
+  z-index: 1;
+}
+
+.bannerContainer {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.bannerTitle {
+  font-size: 56px;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.bannerSubtitle {
+  font-size: 20px;
+  color: #F9F7F1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contentSection {
+  padding: 100px 0;
+  background-color: var(--template-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.textColumn {
+  padding-right: 20px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.paragraph {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--template-color);
+  margin: 0;
+}
+
+.imageColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  height: 250px;
+}
+
+/* Make the first image span both columns */
+.featuredImage {
+  grid-column: 1 / -1;
+  height: 350px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .textColumn {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+  .bannerTitle {
+    font-size: 42px;
+  }
+  .imageColumn {
+    grid-template-columns: 1fr;
+  }
+  .featuredImage {
+    height: 250px;
+  }
+}
+
+/* Mission & Donation Banner */
+.missionBanner {
+  background: var(--primary-color);
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.missionBanner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.missionContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.missionContent h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.missionContent p {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.statBox h3 {
+  font-size: 48px;
+  color: var(--pastel-yellow);
+  margin-bottom: 5px;
+}
+
+.statBox span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+}
+
+.donateBtn {
+  font-size: 18px;
+  padding: 16px 48px;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 100px 0;
+  background-color: var(--template-bg);
+}
+
+.faqContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.faqImageWrapper {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.faqImage {
+  object-fit: cover;
+}
+
+.faqTitle {
+  font-size: 38px;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordionItem {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.accordionHeader {
+  width: 100%;
+  text-align: left;
+  padding: 24px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.accordionHeader:hover {
+  color: var(--primary-color);
+}
+
+.iconOpen, .iconClose {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+.accordionBody {
+  padding: 0 24px;
+  color: var(--template-color);
+  line-height: 1.6;
+}
+
+.accordionBody p {
+  padding-bottom: 24px;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .faqContainer {
+    grid-template-columns: 1fr;
+  }
+  .faqImageWrapper {
+    height: 400px;
+    margin-bottom: 40px;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

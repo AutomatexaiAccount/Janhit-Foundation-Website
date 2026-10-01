@@ -11,19 +11,19 @@ const programmes = [
     id: 1,
     title: "Child Education",
     description: "Set up a secure and user-friendly online donation platform that accepts multiple payment methods. Include options for one-time and recurring donations.",
-    image: "https://www.janhitfoundation.in/wp-content/uploads/2025/04/child-education.png",
+    image: "/Home Page Images/Home Child Eductaion.webp",
   },
   {
     id: 2,
     title: "Healthy Food",
     description: "Set up a secure and user-friendly online donation platform that accepts multiple payment methods. Include options for one-time and recurring donations.",
-    image: "https://www.janhitfoundation.in/wp-content/uploads/2025/04/healthy-food.png",
+    image: "/Home Page Images/Home Healthy Food.jpg",
   },
   {
     id: 3,
     title: "Medical Care",
     description: "Set up a secure and user-friendly online donation platform that accepts multiple payment methods. Include options for one-time and recurring donations.",
-    image: "https://www.janhitfoundation.in/wp-content/uploads/2025/04/medical-care.png",
+    image: "/Home Page Images/Home Medical Care.webp",
   }
 ];
 

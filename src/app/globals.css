@@ -1,16 +1,24 @@
 :root {
-  --base-color: #f59e0b;
-  --base-color-hover: #d97706;
-  --template-bg: #fafaf9;
-  --template-color: #44403c;
+  --base-color: #DE5824; /* Vibrant Orange */
+  --base-color-hover: #C54D1F;
+  --template-bg: #F9F7F1; /* Soft cream/beige */
+  --template-color: #333333; /* Deep charcoal */
   --white: #ffffff;
   --black: #000000;
   
-  /* Rich, premium greens */
-  --primary-color: #065f46;
-  --primary-light: #059669;
-  --secondary-color: #064e3b;
-  --dark-bg: #022c22;
+  /* Rich, premium colors */
+  --primary-color: #DE5824;
+  --primary-light: #F06A36;
+  --secondary-color: #2D3748; /* Dark charcoal/blue for headings */
+  --dark-bg: #1A202C;
+  
+  /* Pastel backgrounds for cards */
+  --pastel-orange: #FFF0EC;
+  --pastel-blue: #C8FFFD;
+  --pastel-yellow: #FDFFC9;
+  --pastel-green: #E6FFEC;
+  --pastel-purple: #F3E8FF;
+  --pastel-pink: #FFE8F2;
   
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);

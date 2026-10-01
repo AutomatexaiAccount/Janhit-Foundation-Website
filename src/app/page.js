@@ -9,7 +9,7 @@ import ImpactDashboard from "../components/ImpactDashboard";
 import OurJourney from "../components/OurJourney";
 import WhereWeWork from "../components/WhereWeWork";
 import WhyJanhit from "../components/WhyJanhit";
-import CSRPartnerships from "../components/CSRPartnerships";
+
 import Partners from "../components/Partners";
 import KnowledgeReports from "../components/KnowledgeReports";
 import CallToAction from "../components/CallToAction";
@@ -34,7 +34,7 @@ export default function Home() {
         <StoriesOfChange />
         <ImpactDashboard />
         <WhyJanhit />
-        <CSRPartnerships />
+
         <Partners />
         <KnowledgeReports />
         <CallToAction />
