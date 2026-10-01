@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 import WelcomeSection from "../components/WelcomeSection";
 import ImpactStats from "../components/ImpactStats";
 import MissionVision from "../components/MissionVision";
@@ -23,7 +23,7 @@ export default function Home() {
         <meta name="description" content="Welcome To Janhit Foundation. Working for Environmental & Water Conservation." />
       </Head>
       <main>
-        <Header />
+        <Hero />
         <WelcomeSection />
         <ImpactStats />
         <MissionVision />

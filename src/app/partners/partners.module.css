@@ -1,0 +1,73 @@
+.bannerSection {
+  margin-top: 150px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.bannerHeader {
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: var(--base-color, #ffc107);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  color: var(--secondary-color, #122f2a);
+  font-size: 56px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.bannerImageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fullImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.partnersGrid {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.partnerCard {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.partnerLogo {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}

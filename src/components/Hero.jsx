@@ -1,21 +1,62 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Hero.module.css";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+
+const slides = [
+  {
+    image: "/slider-1.jpg",
+    subtitle: "Building Sustainable Communities",
+    title: "Charity With Difference.",
+    description: "Join our monthly giving program to provide consistent support to our initiatives. Regular contributions, no matter the size, help us plan and sustain long-term projects."
+  },
+  {
+    image: "/slider-3.jpg",
+    subtitle: "Education is Empowerment",
+    title: "Empowering Next Generation.",
+    description: "Education is the basic right of every child. We ensure that every underprivileged child gets access to quality education for a brighter future."
+  },
+  {
+    image: "/slider-5.jpg",
+    subtitle: "Protecting Our Environment",
+    title: "Save Water, Save Life.",
+    description: "Through community awareness and sustainable practices, we work towards water conservation and ensuring clean drinking water for everyone."
+  }
+];
 
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Change slide every 5 seconds
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className={styles.hero}>
-      <div className={styles.overlay}></div>
-      <div className={`container ${styles.content}`}>
-        <h3 className={styles.subtitle}>Building Sustainable Communities</h3>
-        <h1 className={styles.title}>Creating Measurable Impact.</h1>
-        <p className={styles.description}>
-          Since 1998, Janhit Foundation has worked with communities across Western Uttar Pradesh and NCR to strengthen water security, promote sustainable agriculture, protect children, empower women and build resilient livelihoods.
-        </p>
-        <div className={styles.buttons}>
-          <Link href="/impact" className="btn">Explore Our Impact</Link>
-          <Link href="/partner-with-us" className="btn btn-secondary">Partner With Us</Link>
-          <Link href="/programmes" className="btn btn-outline" style={{ border: '2px solid white', background: 'transparent', color: 'white' }}>View Our Programmes</Link>
+      {slides.map((slide, index) => (
+        <div 
+          key={index} 
+          className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
+        >
+          <img src={slide.image} alt="slider image" className={styles.sliderImage} />
         </div>
+      ))}
+      
+      {/* Slider Controls */}
+      <div className={styles.controls}>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`${styles.dot} ${index === currentSlide ? styles.activeDot : ''}`}
+            onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

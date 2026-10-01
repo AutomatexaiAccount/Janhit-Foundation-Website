@@ -2,6 +2,8 @@ import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Preloader from "../components/Preloader";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import CustomCursor from "../components/CustomCursor";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -24,7 +26,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${nunito.variable} ${nunitoSans.variable}`}>
+        <Header />
         <Preloader />
+        <CustomCursor />
         {children}
         <Footer />
       </body>
