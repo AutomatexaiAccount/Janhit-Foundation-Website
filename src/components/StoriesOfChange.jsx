@@ -9,21 +9,21 @@ const stories = [
     id: 1,
     title: "A Farmer's Journey",
     summary: "From chemical-intensive farming and declining soil health to sustainable agriculture and increased income.",
-    image: "/healthy-food.png",
+    image: "/Home Page Images/Home Farmer NGo.jpg",
     link: "/stories/farmer"
   },
   {
     id: 2,
     title: "A Child's Journey",
     summary: "From vulnerability and crisis to rescue, family restoration, and a safe environment.",
-    image: "/child-education.png",
+    image: "/Home Page Images/Home Child Journey.jpg",
     link: "/stories/child"
   },
   {
     id: 3,
     title: "A Woman's Journey",
     summary: "Overcoming challenges through support, skill development, income generation, and renewed agency.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/Home Page Images/Home Women Journey.jpg",
     link: "/stories/woman"
   }
 ];

@@ -72,9 +72,9 @@ export default function Header() {
                   <span className={styles.arrow}>›</span>
                 </div>
                 <ul className={styles.dropdown}>
-                  <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}>Who We Are</Link></li>
-                  <li><Link href="/mission-vision" onClick={() => setIsMobileMenuOpen(false)}>Mission & Vision</Link></li>
-                  <li><Link href="/our-team" onClick={() => setIsMobileMenuOpen(false)}>Our Team</Link></li>
+                  <li><Link href="/about-us/who-we-are" onClick={() => setIsMobileMenuOpen(false)}>Who We Are?</Link></li>
+                  <li><Link href="/about-us/founder" onClick={() => setIsMobileMenuOpen(false)}>Founder</Link></li>
+                  <li><Link href="/about-us/director" onClick={() => setIsMobileMenuOpen(false)}>Director</Link></li>
                 </ul>
               </li>
               
