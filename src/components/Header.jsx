@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 import Image from "next/image";
 
@@ -8,6 +9,11 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const toggleSubmenu = (menu) => {
     setOpenSubmenu(openSubmenu === menu ? null : menu);
@@ -50,13 +56,13 @@ export default function Header() {
           </div>
           {/* Mobile Overlay */}
           {isMobileMenuOpen && (
-            <div className={styles.overlay} onClick={() => setIsMobileMenuOpen(false)}></div>
+            <div className={styles.overlay}></div>
           )}
           
           <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ""}`}>
             <div className={styles.mobileNavHeader}>
               <img src="https://www.janhitfoundation.in/wp-content/uploads/2026/06/janhit-logo.png" alt="Janhit Foundation" height="40" />
-              <button className={styles.closeBtn} onClick={() => setIsMobileMenuOpen(false)}>×</button>
+              <button className={styles.closeBtn}>×</button>
             </div>
             
             <div className={styles.mobileHelpline}>
@@ -64,7 +70,7 @@ export default function Header() {
             </div>
 
             <ul className={styles.navLinks}>
-              <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home <span>›</span></Link></li>
+              <li><Link href="/">Home <span>›</span></Link></li>
               
               <li className={`${styles.hasDropdown} ${openSubmenu === 'about' ? styles.activeSubmenu : ''}`}>
                 <div className={styles.menuItemHeader} onClick={() => toggleSubmenu('about')}>
@@ -72,9 +78,12 @@ export default function Header() {
                   <span className={styles.arrow}>›</span>
                 </div>
                 <ul className={styles.dropdown}>
-                  <li><Link href="/about-us/who-we-are" onClick={() => setIsMobileMenuOpen(false)}>Who We Are?</Link></li>
-                  <li><Link href="/about-us/founder" onClick={() => setIsMobileMenuOpen(false)}>Founder</Link></li>
-                  <li><Link href="/about-us/director" onClick={() => setIsMobileMenuOpen(false)}>Director</Link></li>
+                  <li><Link href="/about-us/who-we-are">Who We Are?</Link></li>
+                  <li><Link href="/about-us/founder">Founder</Link></li>
+                  <li><Link href="/about-us/director">Director</Link></li>
+                  <li><Link href="/about-us/history">History</Link></li>
+                  <li><Link href="/about-us/location">Location</Link></li>
+                  <li><Link href="/about-us/vacancies">Vacancies</Link></li>
                 </ul>
               </li>
               
@@ -84,15 +93,48 @@ export default function Header() {
                   <span className={styles.arrow}>›</span>
                 </div>
                 <ul className={styles.dropdown}>
-                  <li><Link href="/programs/sustainable-agriculture" onClick={() => setIsMobileMenuOpen(false)}>Sustainable Agriculture</Link></li>
-                  <li><Link href="/programs/women-rights" onClick={() => setIsMobileMenuOpen(false)}>Women Rights Protection</Link></li>
-                  <li><Link href="/programs/water-conservation" onClick={() => setIsMobileMenuOpen(false)}>Water Conservation & Awareness</Link></li>
-                  <li><Link href="/programs/child-rights" onClick={() => setIsMobileMenuOpen(false)}>Child Rights Protection</Link></li>
+                  <li><Link href="/programs/sustainable-agriculture">Sustainable Agriculture</Link></li>
+                  <li><Link href="/programs/women-rights">Women Rights Protection</Link></li>
+                  <li><Link href="/programs/water-conservation">Water Conservation & Awareness</Link></li>
+                  <li><Link href="/programs/child-rights">Child Rights Protection</Link></li>
+                  <li><Link href="/programs/environment">Environment</Link></li>
+                  <li><Link href="/programs/gyan-ashram">Gyan Ashram</Link></li>
+                  <li><Link href="/programs/give-as-you-earn">Give as you earn</Link></li>
+                  <li><Link href="/programs/my-clean-meerut">My Clean Meerut</Link></li>
                 </ul>
               </li>
-              <li><Link href="/partners" onClick={() => setIsMobileMenuOpen(false)}>Partners <span>›</span></Link></li>
-              <li><Link href="/get-involved" onClick={() => setIsMobileMenuOpen(false)}>Get Involved <span>›</span></Link></li>
-              <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact Us <span>›</span></Link></li>
+
+              <li className={`${styles.hasDropdown} ${openSubmenu === 'achievements' ? styles.activeSubmenu : ''}`}>
+                <div className={styles.menuItemHeader} onClick={() => toggleSubmenu('achievements')}>
+                  <span>Achievements</span>
+                  <span className={styles.arrow}>›</span>
+                </div>
+                <ul className={styles.dropdown}>
+                  <li><Link href="/achievements/awards">Awards</Link></li>
+                  <li><Link href="/achievements/organic-aaharam">Organic Aaharam</Link></li>
+                  <li><Link href="/achievements/agriculture-innovation">Agriculture Innovation</Link></li>
+                  <li><Link href="/achievements/rainwater-harvesting">Rainwater Harvesting</Link></li>
+                </ul>
+              </li>
+
+              <li><Link href="/events">Events <span>›</span></Link></li>
+              <li><Link href="/partners">Partners <span>›</span></Link></li>
+              
+              <li className={`${styles.hasDropdown} ${openSubmenu === 'resources' ? styles.activeSubmenu : ''}`}>
+                <div className={styles.menuItemHeader} onClick={() => toggleSubmenu('resources')}>
+                  <span>Resources</span>
+                  <span className={styles.arrow}>›</span>
+                </div>
+                <ul className={styles.dropdown}>
+                  <li><Link href="/resources/news-media">News & Media</Link></li>
+                  <li><Link href="/resources/newsletter">Newsletter</Link></li>
+                  <li><Link href="/resources/downloads">Downloads</Link></li>
+                  <li><Link href="/resources/gallery">Gallery</Link></li>
+                </ul>
+              </li>
+
+              <li><Link href="/get-involved">Get Involved <span>›</span></Link></li>
+              <li><Link href="/contact-us">Contact Us <span>›</span></Link></li>
             </ul>
           </nav>
           <div className={styles.actions}>
