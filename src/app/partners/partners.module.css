@@ -1,11 +1,13 @@
 .bannerSection {
-  margin-top: 150px;
+  margin-top: 100px;
   text-align: center;
-  padding: 0 20px;
+  padding: 120px 20px 60px;
+  background-color: #f8fbfa;
 }
 
 .bannerHeader {
-  margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .subtitle {
@@ -24,19 +26,6 @@
   font-size: 56px;
   font-weight: 900;
   margin: 0;
-}
-
-.bannerImageContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.fullImage {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .partnersGrid {

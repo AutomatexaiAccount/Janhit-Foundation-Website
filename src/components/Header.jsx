@@ -26,11 +26,11 @@ export default function Header() {
       <div className={styles.topbar}>
         <div className={`container ${styles.topbarInner}`}>
           <div className={styles.topbarContact}>
-            <a href="mailto:info@janhitfoundation.in">
-              <span>📧 info@janhitfoundation.in</span>
+            <a href="mailto:janhitfoundation@gmail.com">
+              <span>📧 janhitfoundation@gmail.com</span>
             </a>
             <a href="tel:0121-4302021">
-              <span>📞 0121- 4302021</span>
+              <span>📞 0121-4302021</span>
             </a>
           </div>
           <div className={styles.topbarMessage}>
@@ -98,7 +98,7 @@ export default function Header() {
           <div className={styles.actions}>
              <div className={styles.callUs}>
                 <span>Call Us Now</span>
-                <a href="tel:0121-4302021"><strong>0121- 4302021</strong></a>
+                <a href="tel:0121-4302021"><strong>0121-4302021</strong></a>
              </div>
           </div>
           <button className={`${styles.mobileMenuBtn} ${isMobileMenuOpen ? styles.open : ""}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

@@ -84,13 +84,9 @@ export default function PartnersPage() {
         <section className={styles.bannerSection}>
           <div className={styles.bannerHeader}>
             <div className={styles.subtitle}>
-              <span>♡ Start Donating People</span>
+              <span>♡ Start Donating Poor People</span>
             </div>
             <h1 className={styles.title}>Partners</h1>
-          </div>
-          
-          <div className={styles.bannerImageContainer}>
-            <img src="/children-bg.png" alt="Children" className={styles.fullImage} />
           </div>
         </section>
 

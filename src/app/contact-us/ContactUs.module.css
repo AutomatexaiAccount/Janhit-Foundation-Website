@@ -1,0 +1,148 @@
+.main {
+  width: 100%;
+  background-color: #f8fbfa;
+  min-height: 100vh;
+}
+
+/* Banner Section */
+.bannerSection {
+  padding: 180px 20px 80px;
+  background-color: #f8fbfa;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: #f59e0b;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #122f2a;
+  font-size: 56px;
+  font-weight: 900;
+  margin: 0 0 30px;
+  line-height: 1.2;
+}
+
+/* Contact Info Section */
+.contactInfoSection {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 40px;
+  color: #122f2a;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.sectionHeader p {
+  font-size: 18px;
+  color: #555;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.infoCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid #f59e0b;
+}
+
+.infoCard:hover {
+  transform: translateY(-10px);
+}
+
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  background-color: #eef8f6;
+  color: #046a58;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+}
+
+.infoCard h3 {
+  font-size: 22px;
+  color: #122f2a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.infoCard p, .infoCard a {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.infoCard a:hover {
+  color: #f59e0b;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f1f8f6;
+  color: #046a58;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: #046a58;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 42px;
+  }
+}

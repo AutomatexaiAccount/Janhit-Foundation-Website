@@ -7,17 +7,24 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-.charitySection {
+.personSection {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  align-items: center;
 }
 
-.charityContent, .aboutContent {
+.imageContent, .aboutContent {
   flex: 1;
   min-width: 300px;
+}
+
+.personImage {
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .badge {
@@ -56,17 +63,53 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.phone {
+.primaryBtn {
+  background-color: #ffc107;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #e0a800;
+}
+
+.phoneBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phoneIcon {
+  font-size: 24px;
+}
+
+.phoneDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.phoneLabel {
+  font-size: 14px;
+  color: #666;
+}
+
+.phoneNumber {
+  font-weight: bold;
+  font-size: 16px;
   color: var(--primary-color, #046a58);
 }
 
 @media (max-width: 768px) {
-  .charitySection {
+  .personSection {
     flex-direction: column;
   }
 }
-
