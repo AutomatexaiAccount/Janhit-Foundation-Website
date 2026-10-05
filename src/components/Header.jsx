@@ -50,8 +50,9 @@ export default function Header() {
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.headerContainer}`}>
           <div className={styles.logo}>
-            <Link href="/">
-              <img src="https://www.janhitfoundation.in/wp-content/uploads/2026/06/janhit-logo.png" alt="Janhit Foundation" height="50" />
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+              <img src="/janhit-logo.jpeg" alt="Janhit Foundation Logo" height="60" style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} />
+              <span style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary-color)', fontFamily: 'var(--font-nunito)' }}>Janhit Foundation</span>
             </Link>
           </div>
           {/* Mobile Overlay */}
@@ -60,9 +61,12 @@ export default function Header() {
           )}
           
           <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ""}`}>
-            <div className={styles.mobileNavHeader}>
-              <img src="https://www.janhitfoundation.in/wp-content/uploads/2026/06/janhit-logo.png" alt="Janhit Foundation" height="40" />
-              <button className={styles.closeBtn}>×</button>
+            <div className={styles.mobileNavHeader} style={{ position: 'relative', justifyContent: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <img src="/janhit-logo.jpeg" alt="Janhit Foundation Logo" height="40" style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                <span style={{ fontSize: '19px', fontWeight: 'bold', color: 'var(--primary-color)', fontFamily: 'var(--font-nunito)', paddingTop: '5px' }}>Janhit Foundation</span>
+              </div>
+              <button className={styles.closeBtn} onClick={() => setIsMobileMenuOpen(false)} style={{ position: 'absolute', right: '20px' }}>×</button>
             </div>
             
             <div className={styles.mobileHelpline}>
@@ -133,6 +137,7 @@ export default function Header() {
                 </ul>
               </li>
 
+              <li><Link href="/janhit-gallery">Janhit Gallery <span>›</span></Link></li>
               <li><Link href="/get-involved">Get Involved <span>›</span></Link></li>
               <li><Link href="/contact-us">Contact Us <span>›</span></Link></li>
             </ul>

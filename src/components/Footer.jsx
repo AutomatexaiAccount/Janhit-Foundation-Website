@@ -17,7 +17,12 @@ export default function Footer() {
           {/* Brand & About */}
           <div className={styles.footerCol}>
             <div className={styles.brandName}>
-              <img src="https://www.janhitfoundation.in/wp-content/uploads/2026/06/janhit-logo.png" alt="Janhit Foundation" height="60" style={{ filter: 'brightness(0) invert(1)' }} />
+              <div style={{ background: 'white', display: 'inline-block', padding: '10px 15px', borderRadius: '8px', marginBottom: '15px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <img src="/janhit-logo.jpeg" alt="Janhit Foundation Logo" className={styles.footerLogo} style={{ height: '50px', width: 'auto', display: 'block' }} />
+                  <span style={{ fontSize: '20px', fontWeight: 'bold', color: 'var(--primary-color)', fontFamily: 'var(--font-nunito)', paddingTop: '5px' }}>Janhit Foundation</span>
+                </div>
+              </div>
               <p className={styles.brandTagline}>Alone we can do so little, together we can do so much</p>
             </div>
             <div className={styles.bankDetailsFooter}>
@@ -46,8 +51,9 @@ export default function Footer() {
           <div className={styles.footerCol}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <ul className={styles.linksList}>
-              <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/">Home</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/janhit-gallery">Janhit Gallery</Link></li>
             </ul>
           </div>
 
