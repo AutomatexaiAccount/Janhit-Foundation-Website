@@ -15,7 +15,10 @@ const galleryImages = [
   "/Child Right Images/19.jpg",
   "/Child Right Images/20.jpg",
   "/Child Right Images/21.jpg",
-  "/Child Right Images/22.jpg",
+    "/Child Right Images/22.jpg",
+  "/Child Right Images/1.jpeg",
+  "/Child Right Images/WhatsApp Image 2026-08-18 at 4.34.07 PM (1).jpeg",
+  "/Child Right Images/WhatsApp Image 2026-08-18 at 4.34.07 PM.jpeg",
 ];
 
 export default function ChildRightsPage() {

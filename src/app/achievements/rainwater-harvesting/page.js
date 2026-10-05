@@ -87,6 +87,21 @@ export default function RainwaterHarvestingPage() {
               </div>
             </motion.div>
 
+                        {/* Image Gallery */}
+            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <h2 style={{ fontSize: '2rem', color: '#2d3748', marginBottom: '20px', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px' }}>
+                Gallery
+              </h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                <div style={{ width: '100%', height: '300px', backgroundColor: '#e2e8f0', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+                  <img src="/Water Images/IMG_4012.JPG" alt="Water 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <div style={{ width: '100%', height: '300px', backgroundColor: '#e2e8f0', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+                  <img src="/Water Images/IMG_4230.JPG" alt="Water 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              </div>
+            </motion.div>
+
             {/* Consultancy */}
             <motion.div 
               variants={itemVariants} 

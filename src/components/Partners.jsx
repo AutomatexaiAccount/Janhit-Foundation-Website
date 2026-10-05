@@ -21,7 +21,10 @@ const partners = [
   { name: "UNDP", logo: "/UNDP.png" },
   { name: "Ministry of Women Child Development", logo: "/Ministry-of-Women-Child-Development-Govt.-of-India.png" },
   { name: "India Water Portal", logo: "/Waterportal.png" },
-  { name: "CAF", logo: "/CAF.png" },
+    { name: "CAF", logo: "/CAF.png" },
+  { name: "Access to Justice", logo: "/Partners Logo Images/Access to Justic logo.jpg" },
+  { name: "Just Rights for Children", logo: "/Partners Logo Images/Just rights for Childrens Logo.png" },
+  { name: "Kailash Satyarthi", logo: "/Partners Logo Images/Kailash satayarthi Logo.png" },
 ];
 
 export default function Partners() {
