@@ -20,7 +20,7 @@ export default function GalleryGrid({ images }) {
         {images.map((file, index) => (
           <div key={index} className={styles.imageCard} onClick={() => openLightbox(file)}>
             <img 
-              src={`/Gallery Images/${file}`} 
+              src={`/Gallery Images/${encodeURIComponent(file)}`} 
               alt={`Janhit Gallery Image ${index + 1}`} 
               loading="lazy"
             />
@@ -38,7 +38,7 @@ export default function GalleryGrid({ images }) {
         <div className={styles.lightbox} onClick={closeLightbox}>
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeButton} onClick={closeLightbox}>×</button>
-            <img src={`/Gallery Images/${selectedImage}`} alt="Enlarged" />
+            <img src={`/Gallery Images/${encodeURIComponent(selectedImage)}`} alt="Enlarged" />
           </div>
         </div>
       )}

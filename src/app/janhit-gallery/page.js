@@ -31,6 +31,8 @@ export default function JanhitGallery() {
       uniqueSizes.add(stats.size);
       return true;
     });
+
+    imageFiles.sort(); // Ensure consistent order across OS
   } catch (error) {
     console.error('Error reading gallery directory:', error);
   }
