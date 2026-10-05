@@ -52,8 +52,15 @@ export default function EnvironmentPage() {
               </motion.div>
             </div>
 
-            <motion.div variants={itemVariants} style={{ borderRadius: '15px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+                        <motion.div variants={itemVariants} style={{ borderRadius: '15px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
               <img src="/Environment Images/Environmentalist-Foundation-of-India-1024x598.jpg" alt="Environmental Foundation" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </motion.div>
+
+            <motion.div variants={itemVariants} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+              <img src="/Environment Images/263707_167130120020686_6726509_n.jpg" alt="Env 1" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              <img src="/Environment Images/Photo 1212.jpeg" alt="Env 2" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              <img src="/Environment Images/WhatsApp Image 2026-08-18 at 4.08.50 PM (1).jpeg" alt="Env 3" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              <img src="/Environment Images/WhatsApp Image 2026-08-18 at 4.08.50 PM.jpeg" alt="Env 4" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
             </motion.div>
 
             <motion.div 

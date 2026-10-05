@@ -17,7 +17,9 @@ export default function GalleryGrid({ images }) {
   return (
     <>
       <div className={styles.grid}>
-        {images.map((file, index) => (
+        {(() => {
+          try {
+            return images.map((file, index) => (
           <div key={index} className={styles.imageCard} onClick={() => openLightbox(file)}>
             <img 
               src={`/Gallery Images/${encodeURIComponent(file)}`} 
@@ -28,7 +30,11 @@ export default function GalleryGrid({ images }) {
               <span>Click to view large</span>
             </div>
           </div>
-        ))}
+        ));
+          } catch (err) {
+            return <div style={{ color: 'red', fontSize: '20px', padding: '20px', background: 'white' }}>ERROR in GalleryGrid map: {err.toString()}</div>;
+          }
+        })()}
         {images.length === 0 && (
           <p>No images found in the gallery.</p>
         )}

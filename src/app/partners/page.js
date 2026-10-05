@@ -66,8 +66,20 @@ const partnersList = [
     logo: "/mahindra.png",
   },
   {
-    name: "Coca-Cola",
+        name: "Coca-Cola",
     logo: "/cocacola.png",
+  },
+  {
+    name: "Access to Justice",
+    logo: "/Partners Logo Images/Access to Justic logo.jpg",
+  },
+  {
+    name: "Just Rights for Children",
+    logo: "/Partners Logo Images/Just rights for Childrens Logo.png",
+  },
+  {
+    name: "Kailash Satyarthi",
+    logo: "/Partners Logo Images/Kailash satayarthi Logo.png",
   },
 ];
 
