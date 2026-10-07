@@ -391,3 +391,12 @@
     display: none;
   }
 }
+
+.mobileOnly {
+  display: none !important;
+}
+@media (max-width: 992px) {
+  .mobileOnly {
+    display: block !important;
+  }
+}

@@ -1,86 +1,49 @@
-"use client";
 
-import Header from "../../components/Header";
-import styles from "./getInvolved.module.css";
-import Head from "next/head";
+"use client";
+import { motion } from 'framer-motion';
 
 export default function GetInvolvedPage() {
   return (
-    <>
-      <Head>
-        <title>Get Involved - Janhit Foundation</title>
-      </Head>
-      <main className={styles.main}>
-        <Header />
+    <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
+      <div style={{ padding: '180px 20px 80px', background: 'linear-gradient(135deg, #1a365d, #DE5824)', textAlign: 'center', color: 'white' }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <h1 style={{ fontSize: '3.5rem', marginBottom: '20px', fontWeight: '800' }}>Get Involved</h1>
+          <p style={{ fontSize: '1.5rem', fontStyle: 'italic', maxWidth: '800px', margin: '0 auto' }}>
+            "Alone we can do so little; together we can do so much."
+          </p>
+        </motion.div>
+      </div>
+      
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '180px 20px 80px' }}>
+        <p style={{ fontSize: '1.2rem', color: '#4a5568', lineHeight: '1.8', marginBottom: '40px', textAlign: 'center' }}>
+          Janhit Foundation recognises that the complex issues confronting modern India can only be addressed when the government, civic society, people, and businesses join forces and collaborate. We can make a genuine difference in the lives of millions of people in need if we work together.
+        </p>
         
-        {/* Banner Section */}
-        <section className={styles.bannerSection}>
-          <div className={styles.bannerContent}>
-            <div className={styles.subtitle}>Get Involved</div>
-            <h1 className={styles.title}>Join Our Mission</h1>
-            <div className={styles.quoteBlock}>
-              Alone we can do so little; together we can do so much.
-            </div>
-          </div>
-        </section>
-
-        {/* Intro Section */}
-        <section className={styles.introSection}>
-          <div className={styles.introContent}>
-            <p className={styles.introText}>
-              <strong>Janhit Foundation</strong> recognises that the complex issues confronting modern India can only be addressed when the government, civic society, people, and businesses join forces and collaborate. To avoid failures and increase the chances of success, a broad lens approach that includes many more partners has become essential. The call to combine all stakeholders’ efforts and talents to increase the impact of poverty reduction and social inclusion programmes is becoming increasingly vocal, and Janhit Foundation is trying to achieve this aim through collaborations.
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
+          <motion.div style={{ padding: '40px', backgroundColor: '#f7fafc', borderRadius: '20px', borderTop: '5px solid #DE5824' }} whileHover={{ y: -10 }}>
+            <h2 style={{ fontSize: '2rem', color: '#2d3748', marginBottom: '20px' }}>Volunteering</h2>
+            <p style={{ fontSize: '1.1rem', color: '#4a5568', marginBottom: '20px', lineHeight: '1.7' }}>
+              Each of us has the ability to make a difference. Engaging in campaigns, working directly with communities, and supporting fundraising are all examples of strong intent. Be a part of our effort to help those who are marginalised.
             </p>
-          </div>
-        </section>
-
-        {/* Grid Section */}
-        <section className={styles.involvementGrid}>
-          {/* Card 1: Volunteering */}
-          <div className={styles.card}>
-            <div className={styles.cardIcon}>🤝</div>
-            <h2 className={styles.cardTitle}>Volunteering</h2>
-            <p className={styles.cardText}>
-              Each of us has the ability to make a difference and assist others who are less fortunate in our communities. Engaging in campaigns for the betterment of society, volunteering and working directly with communities, supporting fund raising and monetary contributions to the causes of your choosing are all examples of strong intent to make a difference. Be a part of our effort to help those who are marginalised.
+            <p style={{ fontSize: '1.1rem', color: '#4a5568', fontWeight: 'bold' }}>To volunteer, email us detailing your skills and areas of interest.</p>
+          </motion.div>
+          
+          <motion.div style={{ padding: '40px', backgroundColor: '#f7fafc', borderRadius: '20px', borderTop: '5px solid #3182ce' }} whileHover={{ y: -10 }}>
+            <h2 style={{ fontSize: '2rem', color: '#2d3748', marginBottom: '20px' }}>Internships</h2>
+            <p style={{ fontSize: '1.1rem', color: '#4a5568', marginBottom: '20px', lineHeight: '1.7' }}>
+              From time to time, we activate short-term engagement opportunities for those who want to intern with us to understand our work and grasp the functionality of the development sector. We are always on the lookout for fresh, enthusiastic minds.
             </p>
-          </div>
+            <p style={{ fontSize: '1.1rem', color: '#4a5568', fontWeight: 'bold' }}>For more details, write to us at janhitfoundation@gmail.com</p>
+          </motion.div>
 
-          {/* Card 2: Internship */}
-          <div className={styles.card}>
-            <div className={styles.cardIcon}>🎓</div>
-            <h2 className={styles.cardTitle}>Internship</h2>
-            <p className={styles.cardText}>
-              From time to time, we activate short-term engagement opportunities for those who want to intern with us, to understand Janhit Foundation India’s work and further grasp the functionality of the development sector. We are always on the lookout for fresh, enthusiastic, and dedicated minds to join our team. <br/><br/>
-              For more details, write to us at <a href="mailto:janhitfoundation@gmail.com" className={styles.cardLink}>janhitfoundation@gmail.com</a>
+          <motion.div style={{ padding: '40px', backgroundColor: '#f7fafc', borderRadius: '20px', borderTop: '5px solid #38a169' }} whileHover={{ y: -10 }}>
+            <h2 style={{ fontSize: '2rem', color: '#2d3748', marginBottom: '20px' }}>Employee Giving</h2>
+            <p style={{ fontSize: '1.1rem', color: '#4a5568', marginBottom: '20px', lineHeight: '1.7' }}>
+              Individuals and organisations have been able to give more securely and effectively through our Employee Giving Program. Our philosophy in teamwork allows us to increase our giving while having a greater social effect.
             </p>
-          </div>
-
-          {/* Card 3: Individual Giving */}
-          <div className={styles.card}>
-            <div className={styles.cardIcon}>❤️</div>
-            <h2 className={styles.cardTitle}>Individual Giving</h2>
-            <p className={styles.cardText}>
-              The Janhit Foundation oversees the complete life cycle of social impact programmes in order to increase on-the-ground effectiveness. Individuals and organisations have been able to give more, more securely, and more effectively, and we’ve provided support to make a difference in people’s lives. Our philosophy in teamwork has allowed us to increase our giving while also recognising that we can work better together and have a greater social effect. We foresee a future together that is motivated not by a catastrophe, but by the desire to improve our society. We can make a genuine difference in the lives of millions of people in need if we work together.
-            </p>
-            <div className={styles.bankDetailsBox}>
-              <h3>Bank Details for Direct Donation</h3>
-              <p><strong>Account Name:</strong> Janhit Foundation</p>
-              <p><strong>Ac No.:</strong> 26560100000823</p>
-              <p><strong>IFSC code:</strong> BARB0SHAMEE</p>
-              <p><strong>Branch:</strong> Shastrinagar, Meerut</p>
-            </div>
-          </div>
-
-          {/* Card 4: Employee Giving */}
-          <div className={styles.card}>
-            <div className={styles.cardIcon}>🏢</div>
-            <h2 className={styles.cardTitle}>Employee Giving Program</h2>
-            <p className={styles.cardText}>
-              Employee giving initiatives are a great approach to improve employee relationships while also supporting the communities where you work. The corporate could use this as an opportunity for the employees to have a philanthropic bent of mind and contribute towards the well-being of the society as a whole. Also, the employees would be able to not just contribute towards the social causes but they also get an opportunity to be able to volunteer with the program being implemented by the organization.
-            </p>
-          </div>
-        </section>
-
-      </main>
-    </>
+          </motion.div>
+        </div>
+      </div>
+    </main>
   );
 }

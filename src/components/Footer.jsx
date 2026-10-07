@@ -52,17 +52,22 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Quick Links</h3>
             <ul className={styles.linksList}>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/about-us/who-we-are">About Us</Link></li>
               <li><Link href="/janhit-gallery">Janhit Gallery</Link></li>
+              <li><Link href="/partnerships">Partnerships & CSR</Link></li>
+              <li><Link href="/projects">Our Projects</Link></li>
             </ul>
           </div>
 
-          {/* Our Services */}
+          {/* Our Programs */}
           <div className={styles.footerCol}>
-            <h3 className={styles.colTitle}>Our Services</h3>
+            <h3 className={styles.colTitle}>Our Programs</h3>
             <ul className={styles.linksList}>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/programs/water-conservation">Water Conservation</Link></li>
+              <li><Link href="/programs/sustainable-agriculture">Sustainable Agriculture</Link></li>
+              <li><Link href="/programs/wash">WASH Program</Link></li>
+              <li><Link href="/programs/community-development">Community Development</Link></li>
+              <li><Link href="/programs/child-rights">Child Rights</Link></li>
             </ul>
           </div>
 
