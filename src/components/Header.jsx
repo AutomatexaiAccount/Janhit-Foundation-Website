@@ -102,6 +102,8 @@ export default function Header() {
                   <li><Link href="/programs/water-conservation">Water Conservation & Awareness</Link></li>
                   <li><Link href="/programs/child-rights">Child Rights Protection</Link></li>
                   <li><Link href="/programs/environment">Environment</Link></li>
+                  <li><Link href="/programs/wash">WASH Program</Link></li>
+                  <li><Link href="/programs/community-development">Community Development</Link></li>
                   <li><Link href="/programs/gyan-ashram">Gyan Ashram</Link></li>
                   <li><Link href="/programs/give-as-you-earn">Give as you earn</Link></li>
                   <li><Link href="/programs/my-clean-meerut">My Clean Meerut</Link></li>
@@ -139,6 +141,10 @@ export default function Header() {
 
               <li><Link href="/janhit-gallery">Janhit Gallery <span>›</span></Link></li>
               <li><Link href="/get-involved">Get Involved <span>›</span></Link></li>
+              <li className={styles.mobileOnly}><Link href="/programs/wash">WASH Program <span>›</span></Link></li>
+              <li className={styles.mobileOnly}><Link href="/programs/community-development">Community Development <span>›</span></Link></li>
+              <li className={styles.mobileOnly}><Link href="/partnerships">Partnerships & CSR <span>›</span></Link></li>
+              <li className={styles.mobileOnly}><Link href="/projects">Our Projects <span>›</span></Link></li>
               <li><Link href="/contact-us">Contact Us <span>›</span></Link></li>
             </ul>
           </nav>

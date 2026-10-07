@@ -8,46 +8,23 @@ export default function GiveAsYouEarnPage() {
     <main className={styles.main}>
       <div className={styles.hero}>
         <div className={styles.heroBg} style={{ filter: 'saturate(1.5)' }}></div>
-        <motion.div 
-          className={styles.heroContent}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div className={styles.heroContent} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
           <h1 className={styles.heroTitle}>Give As You Earn</h1>
-          <p className={styles.heroSubtitle}>A payroll giving programme to support noble causes while you work.</p>
+          <p className={styles.heroSubtitle}>CAF India’s payroll giving programme.</p>
         </motion.div>
       </div>
-
       <div className={styles.container}>
-        <motion.div 
-          className={styles.vacancyBox}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          whileHover={{ borderColor: '#DE5824' }}
-        >
-          <motion.div 
-            style={{ fontSize: '4rem', marginBottom: '20px' }}
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: 'linear' }}
-          >
-            💸
-          </motion.div>
-          <h2 style={{ fontSize: '2rem', color: '#2d3748', marginBottom: '15px' }}>Payroll Giving Programme</h2>
-          <p style={{ fontSize: '1.2rem', color: '#4a5568', maxWidth: '700px', margin: '0 auto 20px auto' }}>
-            Give As You Earn is one of the easiest, most tax-efficient ways of giving to a charity. It allows employees to donate directly from their pre-tax salary to support our environmental and social initiatives.
-          </p>
-          <a href="/contact-us" style={{ 
-            display: 'inline-block',
-            background: 'linear-gradient(135deg, #DE5824, #F06A36)', 
-            color: 'white', 
-            textDecoration: 'none',
-            padding: '12px 35px', 
-            borderRadius: '50px', 
-            fontWeight: 'bold',
-            boxShadow: '0 4px 15px rgba(222, 88, 36, 0.4)'
-          }}>Enroll Your Company</a>
+        <motion.div className={styles.contentWrapper} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+          <p className={styles.paragraph}>Janhit Foundation is a partner in Give as You Earn, CAF India’s payroll giving programme which offers companies and their employees an easy and tax-effective way of giving to the NGO of their choice. As a part of this, we have undertaken a number of activities:</p>
+          
+          <h3 style={{marginTop: '20px', marginBottom: '10px', color: '#DE5824', fontSize: '1.5rem'}}>Vocational Training at Bal Sadan</h3>
+          <p className={styles.paragraph}>We facilitated computer skills training for 30 children at Bal Sadan, a government child observation home in Meerut, providing them with systems and basic software education to build their future.</p>
+          
+          <h3 style={{marginTop: '20px', marginBottom: '10px', color: '#DE5824', fontSize: '1.5rem'}}>Helping the Deprived – Mission ‘Enable’</h3>
+          <p className={styles.paragraph}>We provided enabling devices like wheelchairs, hearing machines, crutches, and walkers to physically challenged children, transforming them from disabled to enabled.</p>
+          
+          <h3 style={{marginTop: '20px', marginBottom: '10px', color: '#DE5824', fontSize: '1.5rem'}}>Free Medical Camps & Education Support</h3>
+          <p className={styles.paragraph}>Conducted medical camps in Jaibheem Nagar, providing free medicines and checkups to address health crises caused by groundwater contamination. We also sponsored school uniforms and materials for slum children.</p>
         </motion.div>
       </div>
     </main>
